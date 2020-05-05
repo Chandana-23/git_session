@@ -10,8 +10,11 @@ def mul(x, y):
 def div(x,y):
     return x/y
 def pow(x,y):
-    return x**y
-
+    if y>1:
+        return x*pow(x,y-1)	#If x,y are float numbers
+    if y<1:
+        m=y%1
+        return x**m
 print("Select operation.")
 print("1.Add")
 print("2.Subtract")
